@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section id="about" class="section active">
+    <div class="container">
+        <h2 class="section-title">Về Tôi</h2>
+        
+        <div class="about-content">
+            <div class="about-sidebar">
+                <div class="about-avatar">👨‍💻</div>
+                <h3>Network Developer</h3>
+                <p style="color: var(--gray);">Chuyên gia Lập Trình Mạng</p>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" title="GitHub">G</a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+                    <a href="mailto:contact@example.com" title="Email">@</a>
+                </div>
+            </div>
+
+            <div>
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+

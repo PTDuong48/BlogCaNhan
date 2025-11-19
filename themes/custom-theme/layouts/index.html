@@ -1,0 +1,51 @@
+{{ define "main" }}
+<section id="home" class="section active">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="avatar">👨‍💻</div>
+      <h1>Chào mừng đến với Blog Lập Trình Mạng</h1>
+      <p>
+        Khám phá thế giới lập trình mạng với Java & JavaScript. Chia sẻ kiến
+        thức, kinh nghiệm và các dự án thực tế trong lĩnh vực Network
+        Programming.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center">
+        <a href="/blog/" class="btn">Khám Phá Blog</a>
+        <a href="/about/" class="btn btn-outline">Về Tôi</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">Bài Viết Nổi Bật</h2>
+    <div class="blog-grid">
+      {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
+      <article class="blog-card">
+        <div class="blog-card-header">
+          <span class="blog-tag"
+            >{{ .Params.category | default "General" }}</span
+          >
+          <h3>
+            <a
+              href="{{ .Permalink }}"
+              style="color: white; text-decoration: none"
+              >{{ .Title }}</a
+            >
+          </h3>
+          <span class="blog-date">{{ .Date.Format "02/01/2006" }}</span>
+        </div>
+        <div class="blog-card-body">
+          <p>{{ .Summary }}</p>
+          <a
+            href="{{ .Permalink }}"
+            class="btn"
+            style="font-size: 0.9rem; padding: 0.5rem 1.5rem"
+            >Đọc tiếp →</a
+          >
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

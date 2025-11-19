@@ -1,0 +1,12 @@
+name = "Custom Theme"
+license = "MIT"
+licenselink = "https://github.com/yourusername/BlogCaNhan/blob/main/LICENSE"
+description = "Custom theme for Network Programming Blog"
+tags = ["blog", "network", "programming"]
+features = ["responsive", "seo"]
+min_version = "0.100.0"
+
+[author]
+  name = "Network Developer"
+  homepage = "https://github.com/yourusername"
+
