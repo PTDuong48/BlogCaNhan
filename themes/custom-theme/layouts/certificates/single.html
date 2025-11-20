@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section id="certificates" class="section active">
   <div class="container">
-    <a href="/certificates/" class="back-link"
+    <a href="{{ "certificates/" | relURL }}" class="back-link"
       >← Quay lại danh sách chứng chỉ</a
     >
 
@@ -36,7 +36,7 @@
       <div class="cert-detail-image">
         {{ if .Params.logo }}
         <img
-          src="{{ .Params.logo }}"
+          src="{{ .Params.logo | relURL }}"
           alt="{{ .Title }}"
           class="cert-badge-image"
         />

@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section id="article" class="section active">
     <div class="container">
-        <a href="/blog/" class="btn back-btn">← Quay lại Blog</a>
+        <a href="{{ "blog/" | relURL }}" class="btn back-btn">← Quay lại Blog</a>
         
         <div class="article-header">
             <div class="article-header-content">
@@ -17,7 +17,7 @@
                 </div>
                 {{ if .Params.image }}
                 <div class="article-header-image">
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="article-featured-image" />
+                    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="article-featured-image" />
                 </div>
                 {{ end }}
             </div>

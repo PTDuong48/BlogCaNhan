@@ -2,7 +2,7 @@
 <section id="project-detail" class="section active about-dark">
   <div class="container mx-auto px-6 py-20">
     <!-- Back Button -->
-    <a href="/about/#projects" class="back-link-project">
+    <a href="{{ "about/#projects" | relURL }}" class="back-link-project">
       <i class="fas fa-arrow-left"></i>
       <span>Quay lại danh sách dự án</span>
     </a>
@@ -12,7 +12,7 @@
       <div class="project-detail-image-wrapper">
         {{ if .Params.image }}
         <img
-          src="{{ .Params.image }}"
+          src="{{ .Params.image | relURL }}"
           alt="{{ .Title }}"
           class="project-detail-image"
         />
