@@ -2,7 +2,7 @@
 title: "StudyQ&A"
 date: 2024-01-01
 description: "Hệ thống hỏi đáp dựa trên tài liệu, sử dụng RAG (Retrieval-Augmented Generation) và AI để trả lời câu hỏi từ nội dung tài liệu"
-image: "/images/study.png"
+image: "images/study.png"
 github: "https://github.com/PTDuong48/StudyQ-A_RAG.git"
 demo: "https://youtu.be/imVoehncGPI"
 tech_stack:

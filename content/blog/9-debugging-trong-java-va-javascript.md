@@ -4,7 +4,7 @@ date: 2024-12-28
 category: "java"
 tags: ["Java", "JavaScript", "Debugging", "Development", "Tools"]
 summary: "Hướng dẫn kỹ thuật debugging hiệu quả trong Java và JavaScript: sử dụng debugger, logging, breakpoints và các công cụ hỗ trợ."
-image: "/images/Debugging.png"
+image: "images/Debugging.png"
 ---
 
 Debugging là kỹ năng quan trọng trong phát triển phần mềm. Bài viết này sẽ hướng dẫn bạn các kỹ thuật debugging hiệu quả cho cả Java và JavaScript.

@@ -4,7 +4,7 @@ date: 2025-01-08
 category: "javascript"
 tags: ["JavaScript", "Event Loop", "Async", "Concurrency", "Node.js"]
 summary: "Tìm hiểu về Event Loop - cơ chế xử lý bất đồng bộ trong JavaScript, cách hoạt động và ứng dụng trong lập trình mạng."
-image: "/images/EventloopJava.jpg"
+image: "images/EventloopJava.jpg"
 ---
 
 Event Loop là một trong những khái niệm quan trọng nhất trong JavaScript, đặc biệt khi làm việc với lập trình mạng và xử lý bất đồng bộ. Hãy cùng khám phá cách nó hoạt động.
