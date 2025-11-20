@@ -3,7 +3,7 @@ title: "App đặt vé xe"
 date: 2024-01-01
 description: "Ứng dụng đặt vé xe khách với app Flutter và API ASP.NET Core. Hỗ trợ tìm kiếm, đặt vé, quản lý vé, check-in bằng QR, và chatbot AI"
 image: "images/datve.png"
-github: "#"
+github: "https://github.com/PTDuong48/AppVeXe.git"
 demo: "#"
 tech_stack:
   frontend:

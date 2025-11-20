@@ -3,7 +3,7 @@ title: "Web đọc truyện chữ"
 date: 2024-01-01
 description: "Nền tảng đọc truyện trực tuyến với hệ thống quản lý nội dung, thanh toán bằng xu, và phân quyền người dùng"
 image: "images/truyen.png"
-github: "https://github.com/PTDuong48"
+github: "https://github.com/Dex-NCuong/DoAn.git"
 demo: "https://youtu.be/Bt7cRFGBQ34"
 tech_stack:
   backend:
