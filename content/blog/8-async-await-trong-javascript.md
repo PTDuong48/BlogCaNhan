@@ -4,7 +4,7 @@ date: 2024-12-30
 category: "javascript"
 tags: ["JavaScript", "Async", "Await", "Promise", "ES6"]
 summary: "Tìm hiểu về async/await - cú pháp hiện đại để xử lý bất đồng bộ trong JavaScript, cách sử dụng và best practices."
-image: "/images/AsyncAwaitJavaScript.png"
+image: "images/AsyncAwaitJavaScript.png"
 ---
 
 Async/await là cú pháp được giới thiệu trong ES2017, giúp viết code bất đồng bộ dễ đọc và dễ hiểu hơn so với Promise chains. Đây là công cụ mạnh mẽ trong lập trình mạng với JavaScript.
