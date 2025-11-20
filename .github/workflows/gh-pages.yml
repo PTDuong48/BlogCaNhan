@@ -37,6 +37,15 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: Verify build
+        run: |
+          echo "Checking built files..."
+          ls -la public/
+          ls -la public/css/ || echo "CSS folder not found"
+          ls -la public/js/ || echo "JS folder not found"
+          test -f public/css/style.css && echo "✓ CSS file exists" || echo "✗ CSS file missing"
+          test -f public/js/main.js && echo "✓ JS file exists" || echo "✗ JS file missing"
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
