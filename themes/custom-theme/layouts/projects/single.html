@@ -1,0 +1,164 @@
+{{ define "main" }}
+<section id="project-detail" class="section active about-dark">
+  <div class="container mx-auto px-6 py-20">
+    <!-- Back Button -->
+    <a href="/about/#projects" class="back-link-project">
+      <i class="fas fa-arrow-left"></i>
+      <span>Quay lại danh sách dự án</span>
+    </a>
+
+    <!-- Project Header -->
+    <div class="project-detail-header reveal">
+      <div class="project-detail-image-wrapper">
+        {{ if .Params.image }}
+        <img
+          src="{{ .Params.image }}"
+          alt="{{ .Title }}"
+          class="project-detail-image"
+        />
+        {{ end }}
+      </div>
+      <div class="project-detail-info-wrapper">
+        <h1 class="project-detail-title">{{ .Title }}</h1>
+        <p class="project-detail-description">{{ .Params.description }}</p>
+        <div class="project-detail-actions">
+          {{ if .Params.github }}
+          <a
+            href="{{ .Params.github }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-project btn-github"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          {{ end }} {{ if .Params.demo }}
+          <a
+            href="{{ .Params.demo }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-project btn-demo"
+          >
+            {{ if or (in .Params.demo "youtube.com") (in .Params.demo "youtu.be") }}
+            <i class="fab fa-youtube"></i>
+            {{ else }}
+            <i class="fas fa-external-link-alt"></i>
+            {{ end }}
+            <span>Demo</span>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Stack Section -->
+    {{ if .Params.tech_stack }}
+    <div class="tech-stack-section reveal">
+      <h2 class="section-title-project">Công nghệ sử dụng</h2>
+
+      {{ if .Params.tech_stack.backend }}
+      <div class="tech-category">
+        <h3 class="tech-category-title">
+          <i class="fas fa-server"></i>
+          Backend
+        </h3>
+        <div class="tech-grid">
+          {{ range .Params.tech_stack.backend }}
+          <div class="tech-item">
+            <i
+              class="{{ .icon }}"
+              data-color="{{ .color }}"
+              style="color: {{ .color }};"
+            ></i>
+            <span class="tech-name">{{ .name }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }} {{ if .Params.tech_stack.frontend }}
+      <div class="tech-category">
+        <h3 class="tech-category-title">
+          <i class="fas fa-paint-brush"></i>
+          Frontend
+        </h3>
+        <div class="tech-grid">
+          {{ range .Params.tech_stack.frontend }}
+          <div class="tech-item">
+            <i
+              class="{{ .icon }}"
+              data-color="{{ .color }}"
+              style="color: {{ .color }};"
+            ></i>
+            <span class="tech-name">{{ .name }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }} {{ if .Params.tech_stack.tools }}
+      <div class="tech-category">
+        <h3 class="tech-category-title">
+          <i class="fas fa-tools"></i>
+          Công cụ phát triển
+        </h3>
+        <div class="tech-grid">
+          {{ range .Params.tech_stack.tools }}
+          <div class="tech-item">
+            <i
+              class="{{ .icon }}"
+              data-color="{{ .color }}"
+              style="color: {{ .color }};"
+            ></i>
+            <span class="tech-name">{{ .name }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }} {{ if .Params.tech_stack.infrastructure }}
+      <div class="tech-category">
+        <h3 class="tech-category-title">
+          <i class="fas fa-server"></i>
+          Cơ sở hạ tầng
+        </h3>
+        <div class="tech-grid">
+          {{ range .Params.tech_stack.infrastructure }}
+          <div class="tech-item">
+            <i
+              class="{{ .icon }}"
+              data-color="{{ .color }}"
+              style="color: {{ .color }};"
+            ></i>
+            <span class="tech-name">{{ .name }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }} {{ if .Params.tech_stack.services }}
+      <div class="tech-category">
+        <h3 class="tech-category-title">
+          <i class="fas fa-plug"></i>
+          Dịch vụ tích hợp
+        </h3>
+        <div class="tech-grid">
+          {{ range .Params.tech_stack.services }}
+          <div class="tech-item">
+            <i
+              class="{{ .icon }}"
+              data-color="{{ .color }}"
+              style="color: {{ .color }};"
+            ></i>
+            <span class="tech-name">{{ .name }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Project Content -->
+    <div class="project-content-wrapper reveal">
+      <div class="project-content-body">{{ .Content }}</div>
+    </div>
+  </div>
+</section>
+{{ end }}

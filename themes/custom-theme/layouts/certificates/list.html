@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section id="certificates" class="section active">
+  <div class="container">
+    <h2 class="section-title">Chứng Chỉ Cisco</h2>
+    <p style="margin-bottom: 2rem; color: var(--gray)">
+      Các chứng chỉ chuyên môn trong lĩnh vực lập trình JavaScript, mạng máy tính và bảo mật từ Cisco Networking Academy
+    </p>
+
+    <div class="cert-grid">
+      {{ range .Params.certificates }}
+      <a href="/certificates/{{ .slug }}/" class="cert-card-link">
+        <div class="cert-card">
+          <div class="cert-image">
+            {{ if .logo }}
+            <img
+              src="{{ .logo }}"
+              alt="{{ .name }}"
+              style="max-width: 100%; max-height: 100%; object-fit: contain"
+            />
+            {{ else }}
+            <span style="font-size: 3rem">{{ if .icon }}{{ .icon }}{{ else }}🏆{{ end }}</span>
+            {{ end }}
+          </div>
+          <div class="cert-body">
+            <div class="cert-title-row">
+              {{ if .icon }}
+              <span class="cert-icon">{{ .icon }}</span>
+              {{ end }}
+              <h3 class="cert-name">{{ .name }}</h3>
+            </div>
+            <p class="cert-year">📅 Năm: {{ .year }}</p>
+            <div class="cert-actions">
+              <span class="btn btn-primary">Xem Chi Tiết →</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+    
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border);">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
+

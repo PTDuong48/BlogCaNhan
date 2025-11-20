@@ -4,12 +4,21 @@
         <a href="/blog/" class="btn back-btn">← Quay lại Blog</a>
         
         <div class="article-header">
-            <h1>{{ .Title }}</h1>
-            <div class="article-meta">
-                <span>📅 {{ .Date.Format "02/01/2006" }}</span>
-                <span>🏷️ {{ .Params.category | default "General" }}</span>
-                {{ if .Params.tags }}
-                <span>Tags: {{ delimit .Params.tags ", " }}</span>
+            <div class="article-header-content">
+                <div class="article-header-text">
+                    <h1>{{ .Title }}</h1>
+                    <div class="article-meta">
+                        <span>📅 {{ .Date.Format "02/01/2006" }}</span>
+                        <span>🏷️ {{ .Params.category | default "General" }}</span>
+                        {{ if .Params.tags }}
+                        <span>Tags: {{ delimit .Params.tags ", " }}</span>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ if .Params.image }}
+                <div class="article-header-image">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="article-featured-image" />
+                </div>
                 {{ end }}
             </div>
         </div>

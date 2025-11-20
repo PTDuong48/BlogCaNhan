@@ -4,6 +4,7 @@ date: 2025-01-03
 category: "javascript"
 tags: ["JavaScript", "DOM", "Frontend", "Web Development", "HTML"]
 summary: "Học cách thao tác với DOM (Document Object Model) trong JavaScript: thêm, sửa, xóa elements, xử lý events và tối ưu hiệu suất."
+image: "/images/DomJavaScript.jpg"
 ---
 
 DOM (Document Object Model) là biểu diễn cấu trúc HTML của trang web. JavaScript cho phép bạn thao tác với DOM để tạo ra các trang web động và tương tác.

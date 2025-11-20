@@ -1,0 +1,334 @@
+{{ define "main" }}
+<section id="about" class="section active about-dark">
+  <!-- Hero Section -->
+  <div
+    class="about-hero-dark min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
+  >
+    <!-- Background Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div
+      class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10"
+    >
+      <!-- Text Content -->
+      <div class="order-2 md:order-1 space-y-6 text-center md:text-left reveal">
+        <div class="about-badge-dark glass">
+          <span>Frontend Developer</span>
+        </div>
+        <h1 class="about-title-dark">
+          Xin chào, tôi là <br />
+          <span class="gradient-text"
+            >{{ .Site.Params.author | default "Network Developer" }}</span
+          >
+        </h1>
+        <p class="about-subtitle-dark">
+          Tôi chuyên thiết kế và xây dựng những trải nghiệm kỹ thuật số đẹp mắt,
+          tối ưu hiệu năng và thân thiện với người dùng.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4"
+        >
+          <a href="#projects" class="btn-hero btn-primary">Xem Portfolio</a>
+          <a href="/certificates/" class="btn-hero btn-secondary">Chứng chỉ</a>
+          <a href="#contact" class="btn-hero btn-outline">Liên hệ</a>
+        </div>
+        <!-- Social Links -->
+        <div
+          class="flex gap-6 justify-center md:justify-start pt-6 text-slate-400"
+        >
+          <a
+            href="https://github.com/PTDuong48"
+            target="_blank"
+            class="social-icon"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://linkedin.com" target="_blank" class="social-icon"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://web.facebook.com/pham.tung.duong.593755"
+            target="_blank"
+            class="social-icon"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </div>
+      </div>
+      <!-- Avatar Image -->
+      <div class="order-1 md:order-2 flex justify-center reveal delay-200">
+        <div class="avatar-container">
+          <div class="avatar-glow-dark"></div>
+          <img
+            src="/images/AnhDaiDien.png"
+            alt="Phạm Tùng Dương"
+            class="avatar-image-dark"
+          />
+          <div class="avatar-badge-dark glass">
+            <div class="badge-dot"></div>
+            <span>Open to work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about-content" class="py-20 bg-dark">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="section-title-dark reveal">Về bản thân tôi</h2>
+        <div class="glass p-8 rounded-3xl reveal">
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Stat Cards -->
+            <div
+              class="space-y-4 md:col-span-1 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-700 pb-6 md:pb-0"
+            >
+              <div class="text-center">
+                <div class="stat-number-dark text-primary">1+</div>
+                <div class="stat-label-dark">Năm kinh nghiệm</div>
+              </div>
+              <div class="text-center">
+                <div class="stat-number-dark text-secondary">3+</div>
+                <div class="stat-label-dark">Dự án hoàn thành</div>
+              </div>
+            </div>
+            <!-- Text Content -->
+            <div
+              class="md:col-span-2 space-y-4 text-slate-300 about-content-text"
+            >
+              <p class="leading-relaxed">
+                Xin chào, mình là một lập trình viên Frontend 21 tuổi, hiện là
+                sinh viên năm 4. Mình yêu thích việc xây dựng giao diện web tối
+                ưu, mượt mà và thân thiện với người dùng.
+              </p>
+              <p class="leading-relaxed">
+                Mục tiêu của mình là trở thành một Frontend Developer chuyên
+                nghiệp và tạo ra những sản phẩm web có giá trị cho cộng đồng.
+              </p>
+              <div class="pt-4">
+                <h4 class="text-white font-semibold mb-3">Sở thích:</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="hobby-tag">📚 Đọc sách</span>
+                  <span class="hobby-tag">☕ Cà phê</span>
+                  <span class="hobby-tag">🏐 Bóng chuyền</span>
+                  <span class="hobby-tag">✈️ Du lịch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 relative">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="section-title-dark">Kỹ năng chuyên môn</h2>
+        <p class="text-slate-400">Công cụ và công nghệ tôi sử dụng hàng ngày</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 reveal">
+        <div class="skill-card-dark glass">
+          <div class="skill-icon-dark skill-html">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h3 class="font-semibold text-white">HTML5 & CSS3</h3>
+        </div>
+        <div class="skill-card-dark glass">
+          <div class="skill-icon-dark skill-js"><i class="fab fa-js"></i></div>
+          <h3 class="font-semibold text-white">JavaScript (ES6+)</h3>
+        </div>
+        <div class="skill-card-dark glass">
+          <div class="skill-icon-dark skill-react">
+            <i class="fab fa-react"></i>
+          </div>
+          <h3 class="font-semibold text-white">ReactJS</h3>
+        </div>
+        <div class="skill-card-dark glass">
+          <div class="skill-icon-dark skill-tailwind">
+            <i class="fas fa-wind"></i>
+          </div>
+          <h3 class="font-semibold text-white">Tailwind CSS</h3>
+        </div>
+        <div class="skill-card-dark glass">
+          <div class="skill-icon-dark skill-node">
+            <i class="fab fa-node"></i>
+          </div>
+          <h3 class="font-semibold text-white">Node.js Basic</h3>
+        </div>
+        <div class="skill-card-dark glass">
+          <div class="skill-icon-dark skill-git">
+            <i class="fab fa-git-alt"></i>
+          </div>
+          <h3 class="font-semibold text-white">Git & Github</h3>
+        </div>
+        <div class="skill-card-dark glass">
+          <div class="skill-icon-dark skill-figma">
+            <i class="fab fa-figma"></i>
+          </div>
+          <h3 class="font-semibold text-white">Figma</h3>
+        </div>
+        <div class="skill-card-dark glass">
+          <div class="skill-icon-dark skill-responsive">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3 class="font-semibold text-white">Responsive</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-dark">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title-dark text-center mb-12 reveal">
+        Dự án tiêu biểu
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1: Web đọc truyện chữ -->
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img
+              src="/images/truyen.png"
+              alt="Web đọc truyện chữ"
+              class="project-img"
+            />
+            <div class="project-overlay">
+              <a href="/projects/web-doc-truyen-chu/" class="project-btn"
+                ><i class="fas fa-eye"></i
+              ></a>
+              <!-- Thêm link GitHub: thay href="#" bằng link GitHub của bạn -->
+              <a
+                href="#"
+                class="project-btn"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Web đọc truyện chữ</h3>
+            <p class="project-description">
+              Nền tảng đọc truyện online với giao diện tối giản, tốc độ nhanh và
+              trải nghiệm đọc thoải mái trên mọi thiết bị.
+            </p>
+          </div>
+        </div>
+        <!-- Project Card 2: StudyQ&A -->
+        <div class="project-card reveal delay-100">
+          <div class="project-image">
+            <img src="/images/study.png" alt="StudyQ&A" class="project-img" />
+            <div class="project-overlay">
+              <a href="/projects/studyq-a/" class="project-btn"
+                ><i class="fas fa-eye"></i
+              ></a>
+              <!-- Thêm link GitHub: thay href="#" bằng link GitHub của bạn -->
+              <a
+                href="https://github.com/PTDuong48/StudyQ-A_RAG.git"
+                class="project-btn"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">StudyQ&A</h3>
+            <p class="project-description">
+              Hệ thống hỏi–đáp thông minh sử dụng RAG để phân tích tài liệu và
+              tạo câu trả lời chính xác theo ngữ cảnh.
+            </p>
+          </div>
+        </div>
+        <!-- Project Card 3: App đặt vé xe -->
+        <div class="project-card reveal delay-200">
+          <div class="project-image">
+            <img
+              src="/images/datve.png"
+              alt="App đặt vé xe"
+              class="project-img"
+            />
+            <div class="project-overlay">
+              <a href="/projects/app-dat-ve-xe/" class="project-btn"
+                ><i class="fas fa-eye"></i
+              ></a>
+              <!-- Thêm link GitHub: thay href="#" bằng link GitHub của bạn -->
+              <a
+                href="https://github.com/PTDuong48/AppVeXe.git"
+                class="project-btn"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">App đặt vé xe</h3>
+            <p class="project-description">
+              Ứng dụng giúp người dùng tìm tuyến xe, chọn giờ chạy và đặt vé
+              nhanh chóng, tiện lợi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 relative">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto glass rounded-3xl p-8 md:p-12 reveal">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="contact-info-wrapper">
+            <h2 class="section-title-dark mb-6">Liên hệ hợp tác</h2>
+            <p class="text-slate-400 mb-8 leading-relaxed">
+              Bạn có một ý tưởng thú vị? Hay chỉ đơn giản là muốn kết nối? Đừng
+              ngần ngại để lại lời nhắn cho tôi nhé.
+            </p>
+            <div class="space-y-4 mb-6">
+              <div class="contact-item-dark">
+                <div class="contact-icon-dark">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <span class="contact-text">ptduongsn2004@gmail.com</span>
+              </div>
+              <div class="contact-item-dark">
+                <div class="contact-icon-dark">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span class="contact-text">Ho Chi Minh City, Vietnam</span>
+              </div>
+            </div>
+          </div>
+          <form
+            class="space-y-4"
+            onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã liên hệ!');"
+          >
+            <input
+              type="text"
+              placeholder="Tên của bạn"
+              class="form-input-dark"
+            />
+            <input
+              type="email"
+              placeholder="Email liên hệ"
+              class="form-input-dark"
+            />
+            <textarea
+              rows="4"
+              placeholder="Nội dung tin nhắn..."
+              class="form-input-dark"
+            ></textarea>
+            <button class="btn-submit-dark">Gửi tin nhắn</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+{{ end }}

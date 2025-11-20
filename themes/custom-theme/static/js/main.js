@@ -53,3 +53,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Scroll Reveal Animation for About Page
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 100;
+        
+        revealElements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top;
+            
+            if (elementTop < windowHeight - elementVisible) {
+                element.classList.add('active');
+            }
+        });
+    };
+    
+    // Trigger on scroll
+    window.addEventListener('scroll', revealOnScroll);
+    
+    // Trigger once on load
+    revealOnScroll();
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollReveal);
+} else {
+    initScrollReveal();
+}
+

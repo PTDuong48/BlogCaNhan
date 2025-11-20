@@ -1,42 +1,75 @@
 {{ define "main" }}
 <section id="certificates" class="section active">
   <div class="container">
-    <h2 class="section-title">Chứng Chỉ Cisco</h2>
-    <p style="margin-bottom: 2rem; color: var(--gray)">
-      Các chứng chỉ chuyên môn trong lĩnh vực mạng máy tính và bảo mật
-    </p>
+    <a href="/certificates/" class="back-link"
+      >← Quay lại danh sách chứng chỉ</a
+    >
 
-    <div class="cert-grid">
-      {{ range .Params.certificates }}
-      <div class="cert-card">
-        <div class="cert-image">
-          {{ if .logo }}
-          <img
-            src="{{ .logo }}"
-            alt="{{ .name }}"
-            style="max-width: 100%; max-height: 100%; object-fit: contain"
-          />
-          {{ else }}
-          <span style="font-size: 3rem">🏆</span>
+    <div class="cert-detail-header">
+      <div class="cert-detail-info">
+        <div class="cert-detail-title">
+          {{ if .Params.icon }}
+          <span class="cert-title-icon">{{ .Params.icon }}</span>
+          {{ end }}
+          <h1>{{ .Title }}</h1>
+        </div>
+        <div class="cert-detail-meta">
+          <span class="cert-meta-item">
+            <strong>📅 Năm:</strong> {{ .Params.year }}
+          </span>
+          {{ if .Params.issuer }}
+          <span class="cert-meta-item">
+            <strong>🏢 Phát hành bởi:</strong> {{ .Params.issuer }}
+          </span>
           {{ end }}
         </div>
-        <div class="cert-body">
-          <h3>{{ .name }}</h3>
-          <p class="cert-year">Năm: {{ .year }}</p>
-          {{ if .description }}
-          <p style="color: var(--gray); margin-bottom: 1rem">
-            {{ .description }}
-          </p>
-          {{ end }} {{ if .link }}
-          <a
-            href="{{ .link }}"
-            target="_blank"
-            class="btn"
-            style="font-size: 0.9rem; padding: 0.5rem 1.5rem"
-            >Xem Chứng Chỉ →</a
-          >
+        {{ if .Params.link }}
+        <a
+          href="{{ .Params.link }}"
+          target="_blank"
+          class="btn btn-primary cert-credly-link"
+        >
+          🔗 Xem trên Credly →
+        </a>
+        {{ end }}
+      </div>
+      <div class="cert-detail-image">
+        {{ if .Params.logo }}
+        <img
+          src="{{ .Params.logo }}"
+          alt="{{ .Title }}"
+          class="cert-badge-image"
+        />
+        {{ else }}
+        <div class="cert-badge-placeholder">
+          {{ if .Params.icon }}{{ .Params.icon }}{{ else }}🏆{{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="cert-detail-content">
+      <div class="cert-description-section">
+        <h2>📜 Về Chứng Chỉ</h2>
+        <p>{{ .Params.full_description | default .Params.description }}</p>
+      </div>
+
+      {{ if .Params.skills }}
+      <div class="cert-skills-section">
+        <h2>🎯 Kỹ Năng Đạt Được</h2>
+        <div class="cert-skills-grid">
+          {{ range .Params.skills }}
+          <div class="skill-badge">
+            <span class="skill-check">✅</span>
+            <span class="skill-name">{{ . }}</span>
+          </div>
           {{ end }}
         </div>
+      </div>
+      {{ end }} {{ if .Params.criteria }}
+      <div class="cert-criteria-section">
+        <h2>📋 Tiêu Chí Đạt Được</h2>
+        <p>{{ .Params.criteria }}</p>
       </div>
       {{ end }}
     </div>

@@ -4,6 +4,7 @@ date: 2025-01-12
 category: "javascript"
 tags: ["JavaScript", "Vòng lặp", "ES6", "Lập trình cơ bản"]
 summary: "Khám phá các loại vòng lặp trong JavaScript: for, while, do-while, for...of, for...in và forEach với ví dụ thực tế."
+image: "/images/VonglapJavaScript.png"
 ---
 
 Vòng lặp là cấu trúc điều khiển quan trọng giúp thực thi một khối mã nhiều lần. JavaScript cung cấp nhiều loại vòng lặp khác nhau, mỗi loại phù hợp với các tình huống cụ thể.

@@ -30,22 +30,47 @@ cd BlogCaNhan
 
 ### 2. Cài Đặt Hugo
 
-#### Windows (với Chocolatey)
+#### Windows
+
+**Cách 1: Tải trực tiếp (Khuyến nghị)**
+
+1. Truy cập [Hugo Releases](https://github.com/gohugoio/hugo/releases)
+2. Tải file `hugo_extended_X.X.X_windows-amd64.zip` (phiên bản mới nhất)
+3. Giải nén file zip
+4. Tạo thư mục `C:\Hugo\bin` (hoặc thư mục khác bạn muốn)
+5. Copy file `hugo.exe` vào thư mục đó
+6. Thêm `C:\Hugo\bin` vào biến môi trường PATH:
+   - Mở "Environment Variables" trong Windows Settings
+   - Tìm "Path" trong System variables
+   - Click "Edit" → "New" → Thêm `C:\Hugo\bin`
+   - Click "OK" để lưu
+7. Mở lại terminal và kiểm tra: `hugo version`
+
+**Cách 2: Với Chocolatey (nếu đã cài)**
+
 ```bash
 choco install hugo-extended
 ```
 
-#### macOS (với Homebrew)
+**Cách 3: Với Scoop (nếu đã cài)**
+
+```bash
+scoop install hugo-extended
+```
+
+#### macOS
+
 ```bash
 brew install hugo
 ```
 
 #### Linux
+
 ```bash
 sudo apt-get install hugo
 ```
 
-Hoặc tải từ [Hugo Releases](https://github.com/gohugoio/hugo/releases)
+**Lưu ý:** Trên Windows, bạn KHÔNG thể dùng `sudo apt-get` vì đó là lệnh Linux. Hãy dùng một trong các cách trên.
 
 ### 3. Chạy Local Server
 
@@ -87,7 +112,7 @@ Front matter mẫu:
 ---
 title: "Tiêu Đề Bài Viết"
 date: 2025-01-20
-category: "java"  # hoặc "javascript", "network"
+category: "java" # hoặc "javascript", "network"
 tags: ["Java", "Network", "Socket"]
 summary: "Tóm tắt ngắn gọn về nội dung bài viết"
 ---
@@ -98,8 +123,8 @@ summary: "Tóm tắt ngắn gọn về nội dung bài viết"
 ### Thay Đổi Thông Tin Cá Nhân
 
 1. **config.toml**: Sửa `title`, `params.author`, `params.description`
-2. **content/about/_index.md**: Sửa thông tin về bản thân
-3. **content/certificates/_index.md**: Thêm/sửa chứng chỉ
+2. **content/about/\_index.md**: Sửa thông tin về bản thân
+3. **content/certificates/\_index.md**: Thêm/sửa chứng chỉ
 
 ### Thay Đổi Màu Sắc
 
@@ -107,10 +132,10 @@ Sửa file `themes/custom-theme/static/css/style.css`:
 
 ```css
 :root {
-    --primary: #2563eb;      /* Màu chính */
-    --secondary: #10b981;    /* Màu phụ */
-    --dark: #1e293b;         /* Màu chữ */
-    /* ... */
+  --primary: #2563eb; /* Màu chính */
+  --secondary: #10b981; /* Màu phụ */
+  --dark: #1e293b; /* Màu chữ */
+  /* ... */
 }
 ```
 
@@ -148,16 +173,16 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
-      
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: "latest"
           extended: true
-      
+
       - name: Build
         run: hugo --minify
-      
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -213,6 +238,7 @@ git push origin gh-pages
 ### Trang Certificates
 
 Hiển thị 6 chứng chỉ Cisco mẫu:
+
 - CCNA
 - CCNP Enterprise
 - CCNA Security
@@ -263,4 +289,3 @@ Cảm ơn bạn đã quan tâm đến blog này! Nếu có câu hỏi hoặc gó
 ---
 
 ⭐ Nếu bạn thấy project này hữu ích, hãy cho một star nhé!
-

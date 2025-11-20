@@ -4,6 +4,7 @@ date: 2025-01-15
 category: "java"
 tags: ["Java", "JDK", "JVM", "Lập trình cơ bản"]
 summary: "Tìm hiểu về ngôn ngữ Java, JDK, JRE, JVM và cách cài đặt môi trường phát triển Java trên các hệ điều hành khác nhau."
+image: "/images/GioithieuJava.png"
 ---
 
 Java là một trong những ngôn ngữ lập trình phổ biến nhất thế giới, được phát triển bởi Sun Microsystems vào năm 1995. Ngôn ngữ này được thiết kế với phương châm "Write Once, Run Anywhere" (WORA), cho phép code Java chạy trên bất kỳ nền tảng nào có cài đặt Java Virtual Machine.

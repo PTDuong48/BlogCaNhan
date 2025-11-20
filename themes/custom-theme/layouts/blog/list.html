@@ -12,7 +12,7 @@
 
         <div class="blog-grid" id="blogPosts">
             {{ range .Pages }}
-            <article class="blog-card" data-category="{{ .Params.category | default 'general' }}">
+            <article class="blog-card" data-category="{{ if .Params.category }}{{ .Params.category }}{{ else }}general{{ end }}">
                 <div class="blog-card-header">
                     <span class="blog-tag">{{ .Params.category | default "General" }}</span>
                     <h3><a href="{{ .Permalink }}" style="color: white; text-decoration: none;">{{ .Title }}</a></h3>

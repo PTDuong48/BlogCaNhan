@@ -3,12 +3,14 @@ languageCode = "vi"
 title = "Blog Lập Trình Mạng - Java & JavaScript"
 theme = "custom-theme"
 defaultContentLanguage = "vi"
-paginate = 10
 enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
 enableGitInfo = true
 
 [params]
-  author = "Network Developer"
+  author = "Phạm Tùng Dương"
   description = "Blog chuyên sâu về lập trình mạng với Java và JavaScript, chia sẻ kiến thức và kinh nghiệm thực tế"
   keywords = "Java, JavaScript, Lập trình mạng, Cisco, Network Programming, Socket Programming"
   

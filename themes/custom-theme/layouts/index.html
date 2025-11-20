@@ -19,7 +19,7 @@
   <div class="container">
     <h2 class="section-title">Bài Viết Nổi Bật</h2>
     <div class="blog-grid">
-      {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
+      {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
       <article class="blog-card">
         <div class="blog-card-header">
           <span class="blog-tag"
