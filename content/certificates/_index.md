@@ -8,7 +8,7 @@ certificates:
     description: "Cisco, phối hợp với Viện OpenEDG JS, xác minh người kiếm được huy hiệu này đã hoàn thành thành công khóa học JavaScript Essentials 1 và đạt được chứng chỉ cấp độ sinh viên."
     full_description: "Cisco, phối hợp với Viện OpenEDG JS, xác minh người kiếm được huy hiệu này đã hoàn thành thành công khóa học JavaScript Essentials 1 và đạt được chứng chỉ cấp độ sinh viên. Người kiếm tiền biết cú pháp của JavaScript cốt lõi; có thể làm việc với các biến, toán tử, điều khiển luồng và các chức năng; biết những điều cơ bản về hệ thống kiểu dữ liệu; suy nghĩ theo thuật toán và có thể phân tích vấn đề bằng cách sử dụng bộ máy khái niệm có lập trình; và có thể thiết kế, phát triển và cải thiện các chương trình JavaScript đơn giản."
     link: "https://www.credly.com/badges/c1ade7bd-47ca-4a67-a9e6-f0df0e12766b/public_url"
-    logo: "images/JavaScript1.png"
+    logo: "/images/JavaScript1.png"
     icon: "💻"
     skills:
       [
@@ -27,7 +27,7 @@ certificates:
     description: "Cisco, phối hợp với Viện OpenEDG JS, xác minh người kiếm được huy hiệu này đã hoàn thành thành công khóa học JavaScript Essentials 2 và đạt được chứng chỉ cấp độ sinh viên."
     full_description: "Cisco, phối hợp với Viện OpenEDG JS, xác minh người kiếm được huy hiệu này đã hoàn thành thành công khóa học JavaScript Essentials 2 và đạt được chứng chỉ cấp độ sinh viên. Người kiếm tiền nên biết các kỹ thuật mã hóa trong khi giới thiệu cả các phương pháp tiếp cận dựa trên lớp và không lớp trong lập trình hướng đối tượng, làm quen với một loạt các đối tượng tích hợp được tuyển chọn để mở rộng khả năng lập trình, quản lý các cấu trúc dữ liệu phức tạp, chẳng hạn như Bản đồ và Tập hợp, và lập trình không đồng bộ."
     link: "https://www.credly.com/badges/0fd86bde-fa53-4df0-8758-7a56a6d92cd8/public_url"
-    logo: "images/JavaScript2.png"
+    logo: "/images/JavaScript2.png"
     icon: "⚡"
     skills:
       [
@@ -56,7 +56,7 @@ certificates:
     description: "Cisco xác minh người đạt được huy hiệu này đã hoàn thành thành công khóa học Kiến thức cơ bản về mạng và đạt được chứng chỉ cấp sinh viên này."
     full_description: "Cisco xác minh người đạt được huy hiệu này đã hoàn thành thành công khóa học Kiến thức cơ bản về mạng và đạt được chứng chỉ cấp sinh viên này. Earner có kiến thức về các loại mạng, cách chúng hoạt động, cách thiết bị gửi và nhận dữ liệu, các loại cáp mạng, cách địa chỉ IP tìm thông tin trên Internet, cách vận chuyển và ứng dụng hoạt động, và đã thực hành xây dựng mạng không dây gia đình. Tham gia tối đa 13 hoạt động Cisco Packet Tracer."
     link: "https://www.credly.com/badges/6f659e61-c42c-46dd-94b9-aff3e525f6f1/public_url"
-    logo: "images/NetworkingBasics.png"
+    logo: "/images/NetworkingBasics.png"
     icon: "🌐"
     skills:
       [
@@ -79,7 +79,7 @@ certificates:
     description: "Cisco xác minh người kiếm được huy hiệu này đã hoàn thành thành công khóa học Giới thiệu về An ninh mạng."
     full_description: "Cisco xác minh người kiếm được huy hiệu này đã hoàn thành thành công khóa học Giới thiệu về An ninh mạng. Người có chứng chỉ cấp sinh viên này có kiến thức giới thiệu về an ninh mạng, bao gồm tác động toàn cầu của các mối đe dọa mạng đối với các ngành công nghiệp và lý do tại sao an ninh mạng là một nghề đang phát triển. Họ hiểu các lỗ hổng và phát hiện và bảo vệ mối đe dọa. Họ cũng có cái nhìn sâu sắc về các cơ hội có sẵn khi theo đuổi các chứng chỉ an ninh mạng."
     link: "https://www.credly.com/badges/dc91f5a2-78d4-4ebd-8e41-b6cc20c6386a/public_url"
-    logo: "images/Cybersecurity.png"
+    logo: "/images/Cybersecurity.png"
     icon: "🔒"
     skills:
       [

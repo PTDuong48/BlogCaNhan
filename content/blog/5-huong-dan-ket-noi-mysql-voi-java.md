@@ -4,7 +4,7 @@ date: 2025-01-05
 category: "java"
 tags: ["Java", "MySQL", "JDBC", "Database", "Backend"]
 summary: "Hướng dẫn chi tiết cách kết nối và làm việc với MySQL database trong Java sử dụng JDBC, bao gồm CRUD operations."
-image: "images/KetnoiMySQL.png"
+image: "/images/KetnoiMySQL.png"
 ---
 
 Kết nối Java với MySQL là kỹ năng cơ bản trong phát triển ứng dụng backend. Bài viết này sẽ hướng dẫn bạn từng bước.

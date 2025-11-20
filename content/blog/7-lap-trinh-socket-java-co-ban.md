@@ -4,7 +4,7 @@ date: 2025-01-01
 category: "network"
 tags: ["Java", "Socket", "TCP/IP", "Network Programming", "Server-Client"]
 summary: "Hướng dẫn lập trình socket trong Java: tạo server và client, xử lý kết nối TCP, gửi/nhận dữ liệu và xử lý lỗi."
-image: "images/SocketJava.jpg"
+image: "/images/SocketJava.jpg"
 ---
 
 Socket programming là kỹ năng cốt lõi trong lập trình mạng. Bài viết này sẽ hướng dẫn bạn tạo ứng dụng client-server sử dụng Java Socket API.

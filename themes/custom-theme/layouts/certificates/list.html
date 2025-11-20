@@ -9,23 +9,23 @@
     <div class="cert-grid">
       {{ range .Params.certificates }}
       <a href="{{ printf "certificates/%s/" .slug | relURL }}" class="cert-card-link">
-        <div class="cert-card">
-          <div class="cert-image">
-            {{ if .logo }}
-            <img
+      <div class="cert-card">
+        <div class="cert-image">
+          {{ if .logo }}
+          <img
               src="{{ .logo | relURL }}"
-              alt="{{ .name }}"
-              style="max-width: 100%; max-height: 100%; object-fit: contain"
-            />
-            {{ else }}
+            alt="{{ .name }}"
+            style="max-width: 100%; max-height: 100%; object-fit: contain"
+          />
+          {{ else }}
             <span style="font-size: 3rem">{{ if .icon }}{{ .icon }}{{ else }}🏆{{ end }}</span>
-            {{ end }}
-          </div>
-          <div class="cert-body">
+          {{ end }}
+        </div>
+        <div class="cert-body">
             <div class="cert-title-row">
               {{ if .icon }}
               <span class="cert-icon">{{ .icon }}</span>
-              {{ end }}
+          {{ end }}
               <h3 class="cert-name">{{ .name }}</h3>
             </div>
             <p class="cert-year">📅 Năm: {{ .year }}</p>

@@ -4,7 +4,7 @@ date: 2025-01-10
 category: "network"
 tags: ["Java", "Network", "Socket", "HTTP", "TCP/IP"]
 summary: "Học cách sử dụng các lớp java.net để xử lý kết nối mạng, URL, HTTP requests và responses trong Java."
-image: "images/XulymangJava.png"
+image: "/images/XulymangJava.png"
 ---
 
 Java cung cấp package `java.net` với các lớp mạnh mẽ để xử lý mạng. Hãy cùng khám phá các khái niệm cơ bản về lập trình mạng trong Java.
