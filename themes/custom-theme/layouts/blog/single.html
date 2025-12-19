@@ -6,12 +6,12 @@
         <div class="article-header">
             <div class="article-header-content">
                 <div class="article-header-text">
-                    <h1>{{ .Title }}</h1>
-                    <div class="article-meta">
-                        <span>📅 {{ .Date.Format "02/01/2006" }}</span>
-                        <span>🏷️ {{ .Params.category | default "General" }}</span>
-                        {{ if .Params.tags }}
-                        <span>Tags: {{ delimit .Params.tags ", " }}</span>
+            <h1>{{ .Title }}</h1>
+            <div class="article-meta">
+                <span>📅 {{ .Date.Format "02/01/2006" }}</span>
+                <span>🏷️ {{ .Params.category | default "General" }}</span>
+                {{ if .Params.tags }}
+                <span>Tags: {{ delimit .Params.tags ", " }}</span>
                         {{ end }}
                     </div>
                 </div>
