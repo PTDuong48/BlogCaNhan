@@ -43,7 +43,7 @@
             class="social-icon"
             ><i class="fab fa-github"></i
           ></a>
-          <a href="https://linkedin.com" target="_blank" class="social-icon"
+          <a href="https://www.linkedin.com/in/d%C6%B0%C6%A1ng-ph%E1%BA%A1m-t%C3%B9ng-1bb4b6392/" target="_blank" class="social-icon"
             ><i class="fab fa-linkedin"></i
           ></a>
           <a
@@ -282,52 +282,65 @@
   <!-- Contact Section -->
   <section id="contact" class="py-20 relative">
     <div class="container mx-auto px-6">
-      <div class="max-w-4xl mx-auto glass rounded-3xl p-8 md:p-12 reveal">
+      <div class="max-w-5xl mx-auto reveal">
         <div class="grid md:grid-cols-2 gap-12">
-          <div class="contact-info-wrapper">
-            <h2 class="section-title-dark mb-6">Liên hệ hợp tác</h2>
-            <p class="text-slate-400 mb-8 leading-relaxed">
-              Bạn có một ý tưởng thú vị? Hay chỉ đơn giản là muốn kết nối? Đừng
-              ngần ngại để lại lời nhắn cho tôi nhé.
-            </p>
-            <div class="space-y-4 mb-6">
-              <div class="contact-item-dark">
-                <div class="contact-icon-dark">
-                  <i class="fas fa-envelope"></i>
+          <!-- Left Column: Liên hệ -->
+          <div class="contact-column">
+            <div class="contact-header">
+              <i class="fas fa-envelope contact-header-icon"></i>
+              <h2 class="contact-section-title">Liên hệ</h2>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <i class="fas fa-envelope contact-detail-icon email-icon"></i>
+                <div class="contact-detail-content">
+                  <span class="contact-label">Email:</span>
+                  <a href="mailto:ptduongsn2004@gmail.com" class="contact-value email-value">ptduongsn2004@gmail.com</a>
                 </div>
-                <span class="contact-text">ptduongsn2004@gmail.com</span>
               </div>
-              <div class="contact-item-dark">
-                <div class="contact-icon-dark">
-                  <i class="fas fa-map-marker-alt"></i>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon zalo-icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="20" fill="#3b82f6"/>
+                    <text x="20" y="26" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Arial, sans-serif">Zalo</text>
+                  </svg>
                 </div>
-                <span class="contact-text">Ho Chi Minh City, Vietnam</span>
+                <div class="contact-detail-content">
+                  <span class="contact-label">Zalo:</span>
+                  <span class="contact-value zalo-value">033823516</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <i class="fab fa-facebook contact-detail-icon facebook-icon"></i>
+                <div class="contact-detail-content">
+                  <span class="contact-label">Facebook:</span>
+                  <a href="https://web.facebook.com/pham.tung.duong.593755" target="_blank" class="contact-value facebook-value">Phạm Tùng Dương</a>
+                </div>
               </div>
             </div>
           </div>
-          <form
-            class="space-y-4"
-            onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã liên hệ!');"
-          >
-            <input
-              type="text"
-              placeholder="Tên của bạn"
-              class="form-input-dark"
-            />
-            <input
-              type="email"
-              placeholder="Email liên hệ"
-              class="form-input-dark"
-            />
-            <textarea
-              rows="4"
-              placeholder="Nội dung tin nhắn..."
-              class="form-input-dark"
-            ></textarea>
-            <button class="btn-submit-dark">Gửi tin nhắn</button>
-          </form>
+
+          <!-- Right Column: Kết nối -->
+          <div class="contact-column">
+            <div class="contact-header">
+              <i class="fas fa-globe contact-header-icon"></i>
+              <h2 class="contact-section-title">Kết nối</h2>
             </div>
+            <div class="contact-divider"></div>
+            <div class="connect-buttons">
+              <a href="https://github.com/PTDuong48" target="_blank" class="connect-button">
+                <i class="fab fa-github connect-button-icon"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/d%C6%B0%C6%A1ng-ph%E1%BA%A1m-t%C3%B9ng-1bb4b6392/" target="_blank" class="connect-button">
+                <i class="fab fa-linkedin connect-button-icon"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </section>
 </section>

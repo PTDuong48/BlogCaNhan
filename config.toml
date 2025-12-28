@@ -39,10 +39,18 @@ enableGitInfo = true
     name = "Certificates"
     url = "/certificates/"
     weight = 4
+  [[menu.main]]
+    identifier = "frontend-roadmap"
+    name = "Front-End Roadmap"
+    url = "/frontend-roadmap/"
+    weight = 5
 
 [markup]
   [markup.highlight]
     style = "github-dark"
     codeFences = true
     lineNos = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 

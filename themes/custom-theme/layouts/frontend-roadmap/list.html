@@ -1,0 +1,139 @@
+{{ define "main" }}
+<section id="roadmap" class="section active roadmap-dark">
+  <div class="roadmap-container">
+    <!-- Sidebar -->
+    <aside class="roadmap-sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">Lộ trình Frontend</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/") }}active{{ end }}">
+              <span class="sidebar-number">1</span>
+              <span class="sidebar-text">Tổng quan</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/html-css-basics/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/html-css-basics/") }}active{{ end }}">
+              <span class="sidebar-number">2</span>
+              <span class="sidebar-text">HTML & CSS cơ bản</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/javascript-basics/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/javascript-basics/") }}active{{ end }}">
+              <span class="sidebar-number">3</span>
+              <span class="sidebar-text">JavaScript cơ bản</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/responsive-design/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/responsive-design/") }}active{{ end }}">
+              <span class="sidebar-number">4</span>
+              <span class="sidebar-text">Responsive Design</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/css-framework/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/css-framework/") }}active{{ end }}">
+              <span class="sidebar-number">5</span>
+              <span class="sidebar-text">CSS Framework</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/javascript-es6/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/javascript-es6/") }}active{{ end }}">
+              <span class="sidebar-number">6</span>
+              <span class="sidebar-text">JavaScript ES6+</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/git-version-control/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/git-version-control/") }}active{{ end }}">
+              <span class="sidebar-number">7</span>
+              <span class="sidebar-text">Git & Version Control</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/reactjs/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/reactjs/") }}active{{ end }}">
+              <span class="sidebar-number">8</span>
+              <span class="sidebar-text">React.js</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/state-management/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/state-management/") }}active{{ end }}">
+              <span class="sidebar-number">9</span>
+              <span class="sidebar-text">State Management</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/api-integration/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/api-integration/") }}active{{ end }}">
+              <span class="sidebar-number">10</span>
+              <span class="sidebar-text">API Integration</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/build-tools/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/build-tools/") }}active{{ end }}">
+              <span class="sidebar-number">11</span>
+              <span class="sidebar-text">Build Tools</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/testing/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/testing/") }}active{{ end }}">
+              <span class="sidebar-number">12</span>
+              <span class="sidebar-text">Testing</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ "frontend-roadmap/deployment/" | relURL }}" class="sidebar-link {{ if eq .RelPermalink (relURL "frontend-roadmap/deployment/") }}active{{ end }}">
+              <span class="sidebar-number">13</span>
+              <span class="sidebar-text">Deployment</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="roadmap-content">
+      <article class="roadmap-article">
+        <div class="article-body">
+          {{ .Content }}
+        </div>
+
+        <!-- Navigation -->
+        <nav class="article-navigation">
+          {{ $allPages := .Site.GetPage "/frontend-roadmap" }}
+          {{ $pages := $allPages.Pages }}
+          {{ $sortedPages := sort $pages "Weight" }}
+          {{ $currentIndex := 0 }}
+          {{ range $index, $page := $sortedPages }}
+            {{ if eq $page.RelPermalink $.RelPermalink }}
+              {{ $currentIndex = $index }}
+            {{ end }}
+          {{ end }}
+          
+          {{ if gt $currentIndex 0 }}
+            {{ $prevPage := index $sortedPages (sub $currentIndex 1) }}
+            <a href="{{ $prevPage.RelPermalink }}" class="nav-link nav-prev">
+              <span class="nav-arrow">←</span>
+              <div class="nav-content">
+                <span class="nav-label">Trước</span>
+                <span class="nav-title">{{ $prevPage.Title }}</span>
+              </div>
+            </a>
+          {{ end }}
+
+          {{ if lt $currentIndex (sub (len $sortedPages) 1) }}
+            {{ $nextPage := index $sortedPages (add $currentIndex 1) }}
+            <a href="{{ $nextPage.RelPermalink }}" class="nav-link nav-next">
+              <div class="nav-content">
+                <span class="nav-label">Tiếp</span>
+                <span class="nav-title">{{ $nextPage.Title }}</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </a>
+          {{ end }}
+        </nav>
+      </article>
+    </main>
+  </div>
+</section>
+{{ end }}
+
